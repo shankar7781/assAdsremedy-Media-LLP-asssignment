@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  hello-node:
+    build: .
+    ports:
+      - "80:3000"
+    volumes:
+      - ./main.js:/usr/src/app/main.js
+      - ./package.json:/usr/src/app/package.json
+      - ./package-lock.json:/usr/src/app/package-lock.json
